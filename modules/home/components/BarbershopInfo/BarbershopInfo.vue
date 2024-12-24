@@ -13,9 +13,16 @@
                         Enquire
                     </Button>
 
-                    <Button>
-                        Book now
-                    </Button>
+                    <NuxtLink :to="{
+                        path: '/booking',
+                        query: {
+                            barbershop: barbershop.id
+                        }
+                    }">
+                        <Button>
+                            Book now
+                        </Button>
+                    </NuxtLink>
                 </div>
             </div>
 
@@ -37,9 +44,16 @@
                 Enquire
             </Button>
 
-            <Button class="w-full">
-                Book now
-            </Button>
+            <NuxtLink :to="{
+                        path: '/booking',
+                        query: {
+                            barbershop: barbershop.id
+                        }
+                    }">
+                <Button class="w-full">
+                    Book now
+                </Button>
+            </NuxtLink>
         </div>
     </div>
 </template>

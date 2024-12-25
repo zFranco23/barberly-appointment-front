@@ -16,7 +16,7 @@
 
 </script>
 <template>
-    <button class="btn py-2 px-8 rounded-lg font-bold" :class="classes">
+    <button class="btn py-2 px-8 rounded-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 ease-in-out" :class="classes">
         <slot />
     </button>
 </template>

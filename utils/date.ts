@@ -7,4 +7,16 @@ export const formatDateToHours = (dateString: string) => {
     const formattedHours = hours % 12 || 12;
     return `${formattedHours}:${minutes} ${period}`;
   }
+
+  export const getDayNumberByNumber = (day: number) => {
+    return { 
+      0: 'Sun',
+      1: 'Mon',
+      2: 'Tue',
+      3: 'Wed',
+      4: 'Thu',
+      5: 'Fri',
+      6: 'Sat',
+    }[day] ?? 'Unknown'
+  }
   

@@ -1,12 +1,18 @@
 <template>
     <div>
         <!-- <component :is="currentStepComponent" /> -->
-        <BookingServices />
+        <BookingServices v-if="bookingStore.currentStep === 0" />
+        <BookingDate v-if="bookingStore.currentStep === 1" />
+
+        <!-- Check user -->
+         <RegisterOrLoginBeforeBooking v-if="bookingStore.currentStep === 2" /> 
     </div>
 </template>
 
 <script setup>
     import { useBookingStore } from '../../stores/booking';
+import RegisterOrLoginBeforeBooking from '../RegisterOrLoginBeforeBooking/RegisterOrLoginBeforeBooking.vue';
+    import BookingDate from './BookingDate/BookingDate.vue';
     import BookingServices from './BookingServices/BookingServices.vue';
 
 

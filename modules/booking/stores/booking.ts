@@ -42,6 +42,14 @@ export const useBookingStore = defineStore("booking", () => {
     );
   });
 
+  const goToNextStep = () => {
+    currentStep.value = currentStep.value + 1;
+  };
+
+  const goToPreviousStep = () => {
+    currentStep.value = currentStep.value - 1;
+  };
+
 
   return {
     isLoading,
@@ -52,5 +60,7 @@ export const useBookingStore = defineStore("booking", () => {
     getBarbershop,
     getBarbershopServices,
     servicesList,
+    goToNextStep,
+    goToPreviousStep,
   };
 });

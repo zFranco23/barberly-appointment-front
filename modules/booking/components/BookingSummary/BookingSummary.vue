@@ -11,6 +11,10 @@
             </div>
         </div>
 
+        <div>
+            <BookingSummaryServices />
+        </div>
+
         <div class="p-4">
             <BookingContinueButton />
         </div>
@@ -20,6 +24,7 @@
 <script setup>
 import { useBookingStore } from '../../stores/booking';
 import BookingContinueButton from '../BookingContinueButton/BookingContinueButton.vue';
+import BookingSummaryServices from './BookingSummaryServices.vue';
 
 
     const bookingStore = useBookingStore();
